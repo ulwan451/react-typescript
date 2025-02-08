@@ -1,9 +1,11 @@
 import React from 'react';
+import Layout from '@/components/Layout';
 
 const ProductPage: React.FC = () => {
-
     return (
-        <div>ProductPage</div>
+        <Layout>
+            <div>ProductPage</div>
+        </Layout>
     );
 };
 
