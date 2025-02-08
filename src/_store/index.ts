@@ -1,7 +1,8 @@
 import store from './store';
-import { fetchProducts } from './thunks/productThunks';
+import { fetchProducts, fetchProductById } from './thunks/productThunks';
 
 export {
     store,
-    fetchProducts
+    fetchProducts,
+    fetchProductById
 };
