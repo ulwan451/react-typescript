@@ -5,7 +5,7 @@ import ProductList from '@/components/ProductList';
 import { useProducts } from '@/hooks/use-product';
 
 const ProductPage: React.FC = () => {
-    const { products, loading, error } = useProducts();
+    const { products, loading, error, handleAddToCart } = useProducts();
 
     return (
         <Layout>
@@ -14,6 +14,7 @@ const ProductPage: React.FC = () => {
                 products={products}
                 loading={loading}
                 error={error}
+                onAddToCart={handleAddToCart}
             />
         </Layout>
     );

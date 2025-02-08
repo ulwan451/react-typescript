@@ -6,9 +6,10 @@ interface ProductListProps {
     products: IProduct[];
     loading: boolean;
     error: string | null;
+    onAddToCart: (product: IProduct) => void;
 }
 
-const ProductList = ({ products, loading, error }: ProductListProps) => {
+const ProductList = ({ products, loading, error, onAddToCart }: ProductListProps) => {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {error && <div>Error: {error}</div>}
@@ -25,6 +26,7 @@ const ProductList = ({ products, loading, error }: ProductListProps) => {
                 <ProductCard
                     key={product.id}
                     product={product}
+                    onAddToCart={() => onAddToCart(product)}
                 />
             ))}
         </div>

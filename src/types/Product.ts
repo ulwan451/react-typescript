@@ -12,3 +12,7 @@ export interface IProduct {
     image: string;
     rating: IRating;
 }
+
+export interface ICartItem extends IProduct {
+    quantity: number;
+}
