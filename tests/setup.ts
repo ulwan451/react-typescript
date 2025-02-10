@@ -1,6 +1,6 @@
-import { cleanup } from "@testing-library/react";
-import { afterEach } from "vitest";
+import { afterEach, afterAll, beforeAll } from "vitest";
+import { server } from "./mock/server";
 
-afterEach(() => {
-    cleanup();
-})
+beforeAll(() => server.listen());
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());

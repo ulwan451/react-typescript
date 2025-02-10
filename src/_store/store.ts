@@ -19,7 +19,7 @@ const persistConfig = {
     storage,
 };
 
-const rootReducer = combineReducers({
+export const rootReducer = combineReducers({
     cart: cartSlice,
     products: productsSlices,
 });
