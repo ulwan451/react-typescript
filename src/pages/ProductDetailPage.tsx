@@ -5,7 +5,7 @@ import ProductDetailCard from '@/components/ProductDetailCard';
 import Title from '@/components/Title';
 
 const ProductDetailPage: React.FC = () => {
-    const { productDetail, loading, error, handleAddToCart } = useProductDetail();
+    const { productDetail, loading, error } = useProductDetail();
 
     return (
         <Layout>
@@ -14,7 +14,6 @@ const ProductDetailPage: React.FC = () => {
                 productDetail={productDetail}
                 loading={loading}
                 error={error}
-                handleAddToCart={handleAddToCart}
             />
         </Layout>
     );

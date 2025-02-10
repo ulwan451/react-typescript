@@ -6,10 +6,9 @@ interface ProductDetailCardProps {
     productDetail: IProduct | null;
     loading: boolean;
     error: string | null;
-    handleAddToCart: (product: IProduct) => void;
 }
 
-const ProductDetailCard = ({ productDetail, loading, error, handleAddToCart }: ProductDetailCardProps) => {
+const ProductDetailCard = ({ productDetail, loading, error }: ProductDetailCardProps) => {
     return (
         <div className="flex flex-col items-center justify-center">
             {loading && (
@@ -24,7 +23,6 @@ const ProductDetailCard = ({ productDetail, loading, error, handleAddToCart }: P
                 <ProductCard
                     product={productDetail}
                     description={productDetail.description}
-                    onAddToCart={handleAddToCart}
                 />
             )}
         </div>
